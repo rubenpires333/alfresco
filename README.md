@@ -137,3 +137,7 @@ Once the tagged workflow is successful, the release process is completed.
 * Review the [automatically created
   PR](https://github.com/Alfresco/acs-deployment/pulls) and merge it to
   `download-trial` branch if everything looks good.
+
+## COMANDO PARA INSTALAÇÃO
+
+docker compose -f community-compose.yaml up -d

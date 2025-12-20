@@ -110,6 +110,12 @@ services:
         condition: service_healthy
     ports:
       - "8081:8080"  # Expor para Nginx Proxy Manager (porta diferente)
+    volumes:
+      # Montar personalizações do logo
+      # Criar pasta /opt/alfresco/share-logo no servidor e colocar app-logo.png lá
+      - /opt/alfresco/share-logo:/usr/local/tomcat/webapps/share/res/themes/default/images:ro
+      # Montar extensões customizadas (opcional)
+      - /opt/alfresco/share-custom:/usr/local/tomcat/shared/classes/alfresco/web-extension:ro
     networks:
       - alfresco-network
 
